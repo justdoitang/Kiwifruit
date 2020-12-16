@@ -1,4 +1,5 @@
 ﻿using Kiwifruit.Models.Logs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -23,6 +24,7 @@ namespace Kiwifruit.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Authorize]
         public int Get()
         {
             //_log.Info("测试");
