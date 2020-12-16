@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kiwifruit</name>
+    </assembly>
+    <members>
+        <member name="T:Kiwifruit.Controllers.ValuesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Kiwifruit.Controllers.ValuesController.Get">
+            <summary>
+                
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Kiwifruit.Infrastructure.Configuration.ConfigurationManager">
+            <summary>
+            获取配置信息
+            </summary>
+        </member>
+        <member name="F:Kiwifruit.Infrastructure.Dapper.DataAccess._connectionString">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="F:Kiwifruit.Infrastructure.Dapper.DataAccess._dataBaseType">
+            <summary>
+            数据库类型枚举
+            </summary>
+        </member>
+        <member name="P:Kiwifruit.Infrastructure.Dapper.DataAccess._logger">
+            <summary>
+            日志记录
+            </summary>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.#ctor(Kiwifruit.Models.Logs.ILoggers,System.String,Kiwifruit.Infrastructure.Dapper.DataBaseTypeEnum)">
+            <summary>
+            有参构造函数
+            </summary>
+            <param name="loggers"></param>
+            <param name="connectionString">数据库连接字符串</param>
+            <param name="dataBaseType">数据库类型</param>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.CloseConnection(System.Data.IDbConnection)">
+            <summary>
+            关闭数据库连接
+            </summary>
+            <param name="connection">数据库连接</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.DbConnection">
+            <summary>
+            创建数据库连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.Execute``1(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.Execute``1(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)">
+            <summary>
+            执行SQL语句返回Object对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="transaction">外部事务</param>
+            <param name="connection">数据库连接</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteAsync``1(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteAsync``1(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)">
+            <summary>
+            执行SQL语句返回对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="transaction">外部事务</param>
+            <param name="connection">数据库连接</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteIList``1(System.String,System.Object,System.Boolean,System.Data.CommandType)" -->
+        <!-- Badly formed XML comment ignored for member "M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteIList``1(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)" -->
+        <!-- Badly formed XML comment ignored for member "M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteIListAsync``1(System.String,System.Object,System.Boolean,System.Data.CommandType)" -->
+        <!-- Badly formed XML comment ignored for member "M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteIListAsync``1(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)" -->
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteNonQuery(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回受影响行数
+            </summary>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteNonQuery(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回受影响行数
+            </summary>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="transaction">外部事务</param>
+            <param name="connection">数据库连接</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteNonQueryAsync(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回受影响行数
+            </summary>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteNonQueryAsync(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回受影响行数
+            </summary>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="transaction">外部事务</param>
+            <param name="connection">数据库连接</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteScalar``1(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行语句返回单个值对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataAccess.ExecuteScalarAsync``1(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行语句返回单个值对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kiwifruit.Infrastructure.Dapper.DataBaseTypeEnum">
+            <summary>
+            数据库类型枚举
+            </summary>
+        </member>
+        <member name="T:Kiwifruit.Infrastructure.Dapper.DataRepository">
+            <summary>
+            数据仓储
+            </summary>
+        </member>
+        <member name="F:Kiwifruit.Infrastructure.Dapper.DataRepository.locker">
+            <summary>
+            锁
+            </summary>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataRepository.GetCommandSQL(System.String)">
+            <summary>
+            获取SQL语句内容
+            </summary>
+            <param name="commandName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataRepository.LoadDataXmlStore">
+            <summary>
+            根据 RepositoryAssembly 加载 dll（XXX.Domain.dll）中的xml资源文件
+            </summary>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataRepository.GetFromCache(System.String)">
+            <summary>
+            从缓存中获取SQL语句内容
+            </summary>
+            <param name="commandName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataRepository.LoadCommandXml(System.String)">
+            <summary>
+            载入dll中包含的SQL语句
+            </summary>
+            <param name="fullPath"></param>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataRepository.LoadSQL(System.String,System.String)">
+            <summary>
+            载入SQL语句
+            </summary>
+            <param name="commandName">SQL语句名称</param>
+            <param name="commandSQL">SQL语句内容</param>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.DataRepository.StoreToCache(System.String,System.String)">
+            <summary>
+            将SQL语句存储到缓存中
+            </summary>
+            <param name="commandName"></param>
+            <param name="commandSQL"></param>
+        </member>
+        <member name="T:Kiwifruit.Infrastructure.Dapper.IDataAccess">
+            <summary>
+            数据访问层接口
+            </summary>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.DbConnection">
+            <summary>
+            数据库连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.CloseConnection(System.Data.IDbConnection)">
+            <summary>
+            关闭数据库连接
+            </summary>
+            <param name="connection">数据库连接</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.Execute``1(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.Execute``1(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)">
+            <summary>
+            执行SQL语句返回对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="transaction">外部事务</param>
+            <param name="connection">数据库连接</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteAsync``1(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteAsync``1(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)">
+            <summary>
+            执行SQL语句返回对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="transaction">外部事务</param>
+            <param name="connection">数据库连接</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteIList``1(System.String,System.Object,System.Boolean,System.Data.CommandType)" -->
+        <!-- Badly formed XML comment ignored for member "M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteIList``1(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)" -->
+        <!-- Badly formed XML comment ignored for member "M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteIListAsync``1(System.String,System.Object,System.Boolean,System.Data.CommandType)" -->
+        <!-- Badly formed XML comment ignored for member "M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteIListAsync``1(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)" -->
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteNonQuery(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回受影响行数
+            </summary>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteNonQuery(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回受影响行数
+            </summary>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="transaction">外部事务</param>
+            <param name="connection">数据库连接</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteNonQueryAsync(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回受影响行数
+            </summary>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteNonQueryAsync(System.String,System.Object,System.Data.IDbTransaction,System.Data.IDbConnection,System.Data.CommandType)">
+            <summary>
+            执行SQL语句或存储过程返回受影响行数
+            </summary>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="transaction">外部事务</param>
+            <param name="connection">数据库连接</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteScalar``1(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行语句返回单个值对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataAccess.ExecuteScalarAsync``1(System.String,System.Object,System.Boolean,System.Data.CommandType)">
+            <summary>
+            执行语句返回单个值对象
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="sql">SQL语句 or 存储过程名</param>
+            <param name="param">参数</param>
+            <param name="hasTransaction">是否使用事务</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kiwifruit.Infrastructure.Dapper.IDataRepository">
+            <summary>
+                SQL仓储接口
+            </summary>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataRepository.GetCommandSQL(System.String)">
+            <summary>
+            获取 SQL 语句
+            </summary>
+            <param name="commandName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Infrastructure.Dapper.IDataRepository.LoadDataXmlStore">
+            <summary>
+            批量写入 SQL 语句
+            </summary>
+        </member>
+        <member name="T:Kiwifruit.Infrastructure.Dapper.SqlCommand">
+            <summary>
+            XML 中的 SQL 对应类
+            </summary>
+        </member>
+        <member name="P:Kiwifruit.Infrastructure.Dapper.SqlCommand.Name">
+            <summary>
+            SQL语句名称
+            </summary>
+        </member>
+        <member name="P:Kiwifruit.Infrastructure.Dapper.SqlCommand.Sql">
+            <summary>
+            SQL语句或存储过程内容
+            </summary>
+        </member>
+        <member name="T:Kiwifruit.Models.Enums.LogLevelEnum">
+            <summary>
+            日志等级枚举
+            </summary>
+        </member>
+        <member name="F:Kiwifruit.Models.Enums.LogLevelEnum.Debug">
+            <summary>
+                调试级别
+            </summary>
+        </member>
+        <member name="F:Kiwifruit.Models.Enums.LogLevelEnum.Info">
+            <summary>
+                日常信息级别
+            </summary>
+            
+        </member>
+        <member name="F:Kiwifruit.Models.Enums.LogLevelEnum.Warn">
+            <summary>
+                警告级别
+            </summary>
+            
+        </member>
+        <member name="F:Kiwifruit.Models.Enums.LogLevelEnum.Error">
+            <summary>
+                出错级别
+            </summary>
+        </member>
+        <member name="F:Kiwifruit.Models.Enums.LogLevelEnum.Off">
+            <summary>
+                不记录
+            </summary>
+        </member>
+        <member name="T:Kiwifruit.Models.Logs.ILoggers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.ILoggers.Debug(System.Object,System.String)">
+            <summary>
+                调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.ILoggers.Info(System.Object,System.Object)">
+            <summary>
+                关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.ILoggers.Warn(System.Object,System.Object)">
+            <summary>
+                警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.ILoggers.Error(System.Object,System.Object)">
+            <summary>
+                错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.ILoggers.Error(System.Object,System.Object,System.String)">
+            <summary>
+                错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="title">title</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.ILoggers.Fatal(System.Object,System.Object)">
+            <summary>
+                失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.ILoggers.Apiops(System.Object,System.Object)">
+            <summary>
+                关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="T:Kiwifruit.Models.Logs.LogHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.LogHandler.GetLogger(System.Type)">
+            <summary>
+            获取记录器
+            </summary>
+            <param name="source">soruce</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.LogHandler.Debug(System.Object,System.String)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.LogHandler.Info(System.Object,System.Object)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.LogHandler.Warn(System.Object,System.Object)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.LogHandler.Error(System.Object,System.Object)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.LogHandler.Fatal(System.Object,System.Object)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.LogHandler.Apiops(System.Object,System.Object)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:Kiwifruit.Models.Logs.LogHandler.WriteLine(Kiwifruit.Models.Enums.LogLevelEnum,System.String,System.Object[])">
+            <summary>
+                格式化打印信息
+                时间 日志级别 进程id [进程名] : /*日志内容*/
+                日志级别 INFO｜WARN ｜ERROR ｜DEBUG
+            </summary>
+            <param name="logLevel"></param>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Kiwifruit.Tools.Util.GetDescription(System.Enum)">
+            <summary>
+                枚举扩展方法 - 获取枚举值的Description
+            </summary>
+            <param name="enumName">需要获取枚举描述的枚举</param>
+            <returns>描述内容</returns>
+        </member>
+    </members>
+</doc>
