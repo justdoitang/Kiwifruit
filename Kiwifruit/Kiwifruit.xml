@@ -474,7 +474,6 @@
             </summary>
             <param name="source">source</param>
             <param name="message">message</param>
-            <param name="exception">ex</param>
         </member>
         <member name="T:Kiwifruit.Models.Logs.LogHandler">
             <summary>
