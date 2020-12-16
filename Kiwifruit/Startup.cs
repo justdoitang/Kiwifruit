@@ -36,9 +36,35 @@ namespace Kiwifruit
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath, true); //Ìí¼Ó¿ØÖÆÆ÷²ã×¢ÊÍ£¨true±íÊ¾ÏÔÊ¾¿ØÖÆÆ÷×¢ÊÍ£©
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "",
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                                Reference = new OpenApiReference
+                                {
+                                        Type = ReferenceType.SecurityScheme,
+                                        Id = "Bearer"
+                                }
+                        },
+                        new string[] {}
+                     }
+                 });
             });
         }
 
@@ -61,7 +87,7 @@ namespace Kiwifruit
             });
 
             app.UseRouting();
-                        
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
